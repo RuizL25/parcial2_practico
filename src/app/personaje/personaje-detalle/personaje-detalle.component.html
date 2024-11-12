@@ -1,0 +1,20 @@
+
+<div class="container-fluid">
+  <p class="h3 p-3">{{personajeDetail.name }}</p>
+  <div class="row">
+    <div class="col">
+      <div class="thumb">
+        <img
+          class="img-fluid carta"
+          src="{{ personajeDetail.image }}"
+          alt="{{ personajeDetail.name }}"
+        />
+        <p>nacimiento : {{personajeDetail.dateOfBirth}}</p>
+        <p>patronous : {{personajeDetail.patronus}}</p>
+        <p *ngIf="personajeDetail.alive">Estatus: Vivo</p>
+        <p *ngIf="!personajeDetail.alive">Estatus: Muerto</p>
+        <p>Ancestro : {{personajeDetail.ancestry}}</p>
+      </div>
+    </div>
+  </div>
+</div>
